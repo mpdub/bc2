@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101f19">
+  <title>BLACKCAPS / Form book</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="topline"><span class="mark">NZ<span class="mark-star">✦</span></span><span class="eyebrow">INDEPENDENT CRICKET TRACKER <span class="topline-sep">/</span> MEN'S TEAM</span><span class="edition">FORM BOOK <span id="editionYear"></span></span></div>
+    <div class="hero"><div><p class="kicker">THE BLACKCAPS, EVERYWHERE</p><h1>Follow the form<span class="period">.</span></h1><p class="intro">Every covered innings and spell, from international duty to county grounds and franchise leagues around the world.</p></div><div class="hero-aside"><div class="aside-rule"></div><span>01 / THE SQUAD</span><strong id="heroCount">—</strong><small>contracted players + NZ internationals in the past 24 months</small></div></div>
+    <div class="meta-bar"><span><span class="live-dot"></span> <span id="freshness">Loading match data</span></span><span id="windowLabel">Rolling 24 month selection window</span><a href="#method">DATA &amp; COVERAGE ↗</a></div>
+  </header>
+  <main>
+    <section class="toolbar" aria-label="Filters"><div class="section-heading"><p class="kicker">01 / PLAYER INDEX</p><h2>Squad tracker</h2><p class="section-note">Select a player to see their last 10 batting innings and bowling spells.</p></div><div class="controls"><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search player, team or league" aria-label="Search player, team or league"></label><select id="cohort" aria-label="Filter squad"><option value="all">All players</option><option value="contracted">Contracted</option><option value="international">Recent internationals</option></select><select id="format" aria-label="Filter match format"><option value="all">All formats</option><option value="Test">Test</option><option value="ODI">ODI</option><option value="T20">T20</option><option value="MDM">First class</option><option value="ODM">List A</option></select></div></section>
+    <div class="table-shell"><div class="table-head"><span>PLAYER / STATUS</span><span>LATEST APPEARANCE</span><span>LAST BATTING</span><span>LAST BOWLING</span><span class="open-col">FORM</span></div><div id="list" class="player-list" aria-live="polite"><div class="loading">Loading the squad…</div></div></div>
+    <div class="list-footer"><span id="resultCount">—</span><span>Scores are per innings; bowling figures are per innings.</span></div>
+    <section id="method" class="method"><div><p class="kicker">02 / THE FINE PRINT</p><h2>What’s in the book</h2></div><div class="method-copy"><p>The player list combines current NZC central contracts with anyone recorded playing for New Zealand in a men's Test, ODI or T20I during the rolling 24 month window. A player can appear in both groups.</p><p>Performances come from <a href="https://cricsheet.org/" target="_blank" rel="noopener">Cricsheet’s open ball by ball archive</a>. “All formats” means every match in that archive during the window, including domestic and franchise competitions. It does not mean every cricket match played worldwide. Some leagues, games and recent scorecards may be missing or arrive late. Super overs are excluded; batting balls exclude wides and bowling runs exclude byes and leg byes.</p><p>Each score opens its match scorecard on ESPNcricinfo. The match data and player identities are credited to <a href="https://cricsheet.org/downloads/" target="_blank" rel="noopener">Cricsheet</a>; contract information comes from <a href="https://www.nzc.nz/chapman-moves-to-casual-contract-fisher-earns-maiden-central-contract/" target="_blank" rel="noopener">New Zealand Cricket</a>. This is an independent project and is not affiliated with NZC.</p></div></section>
+  </main>
+  <footer><span>BLACKCAPS / FORM BOOK</span><span>DATA: CRICSHEET · ROSTER: NZC</span><a href="#top" id="backTop">BACK TO TOP ↑</a></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
