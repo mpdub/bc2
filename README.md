@@ -27,6 +27,6 @@ Then open http://localhost:8000. Use `--archive all_json.zip` to reuse a downloa
 
 ## Small print
 
-Cricsheet doesn't cover every match, and new games can take a few days to arrive. Wides don't count as balls faced; byes, leg byes and run outs don't count against the bowler. Super overs are left out.
+Cricsheet doesn't cover every match (notably New Zealand A games), and new games can take a few days to arrive. Wides don't count as balls faced; byes, leg byes and run outs don't count against the bowler. Super overs are left out.
 
 Not affiliated with New Zealand Cricket.
