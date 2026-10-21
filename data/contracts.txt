@@ -1,0 +1,39 @@
+# Who's on a New Zealand Cricket contract.
+# One name per line, under the right heading. Lines starting with # are ignored.
+# Edit this whenever NZC announces a change; the site picks it up on the next update.
+#
+# Last checked: 21 October 2026
+# Sources:
+#   https://www.nzc.nz/news-items/conway-and-tickner-return-blackcaps-2026-27-contract-list-announced/
+#   https://www.nzc.nz/chapman-moves-to-casual-contract-fisher-earns-maiden-central-contract/
+#   https://www.1news.co.nz/2026/10/05/black-caps-kelly-replaces-bracewell-on-nzc-central-contract-list/
+
+[central]
+Tom Blundell
+Devon Conway
+Jacob Duffy
+Matthew Fisher
+Zak Foulkes
+Mitch Hay
+Matt Henry
+Kyle Jamieson
+Nick Kelly
+Tom Latham
+Daryl Mitchell
+Henry Nicholls
+Will O'Rourke
+Glenn Phillips
+Rachin Ravindra
+Mitchell Santner
+Ben Sears
+Nathan Smith
+Blair Tickner
+Will Young
+
+[casual]
+Finn Allen
+Michael Bracewell
+Mark Chapman
+Lockie Ferguson
+Adam Milne
+Tim Seifert

@@ -1,0 +1,54 @@
+name: Update scores
+
+on:
+  schedule:
+    # Every day at 18:23 UTC, which is early morning in New Zealand.
+    - cron: '23 18 * * *'
+  # Lets you run it by hand from the Actions tab.
+  workflow_dispatch:
+  # Also runs straight away when the roster or the script changes.
+  push:
+    branches: [main]
+    paths:
+      - data/contracts.txt
+      - scripts/**
+      - .github/workflows/update.yml
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: update-scores
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild the scores
+        run: python3 scripts/build_data.py
+
+      - name: Save them
+        id: save
+        run: |
+          git add data/players.json
+          if git diff --cached --quiet; then
+            echo "Nothing new today."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update scores"
+          git pull --rebase origin main
+          git push
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Republish the site
+        if: steps.save.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" --silent || echo "Pages will pick up the change on its own."
